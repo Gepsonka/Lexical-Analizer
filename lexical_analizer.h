@@ -59,6 +59,7 @@ class Analizer{
     void read_in_end_of_comment();
     void read_in_found_opening_paranthesis();
     void read_in_big_comment();
+    void read_in_star_in_big_comment();
     void read_in_end_of_big_comment();
     void read_in_colon();
     void read_in_colon_equality();
@@ -67,13 +68,16 @@ class Analizer{
     void read_in_less_then_and_bigger_then();
     void read_in_bigger_then();
     void read_in_bigger_then_or_equal();
-    void error();
+    void read_in_end_of_program();
+    void read_in_correcting();
+    void error(std::string err_msg) const;
 
     
 
 
 public:
     Analizer(std::ifstream &file);
+    ~Analizer();
     void run_analizer();
 
 };
