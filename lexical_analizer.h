@@ -10,33 +10,33 @@
 
 class Analizer{
 
-    enum States {
-        STARTING_STATE=1,
-        IN_IDENTIFIER=2,
-        END_OF_IDENTIFIER=3,
-        IN_NUMBER=4,
-        END_OF_NUMBER=5,
-        IN_COMMENT=6, // {}
-        END_OF_COMMENT=7, // {}
-        FOUND_OPENING_PARANTHESIS=8, // (
-        IN_BIG_COMMENT=9, // (**)
-        STAR_IN_BIG_COMMNET=10, // (**)
-        END_OF_BIG_COMMENT=11, // (**)
-        COLON=12, // :
-        COLON_EQUALITY=13, // := 
-        LESS_THEN=14, // <
-        LESS_THEN_OR_EQUAL=15, // <=
-        LESS_THEN_AND_BIGGER_THEN=16, // <>
-        BIGGER_THEN=17, // >
-        BIGGER_THEN_OR_EQUAL=18, // >=
-        ERROR=19, // err
-        CORRECTING=20,
-        END_OF_PROGRAM=21 // $
-    };
+    // enum States {
+    //     STARTING_STATE=1,
+    //     IN_IDENTIFIER=2,
+    //     END_OF_IDENTIFIER=3,
+    //     IN_NUMBER=4,
+    //     END_OF_NUMBER=5,
+    //     IN_COMMENT=6, // {}
+    //     END_OF_COMMENT=7, // {}
+    //     FOUND_OPENING_PARANTHESIS=8, // (
+    //     IN_BIG_COMMENT=9, // (**)
+    //     STAR_IN_BIG_COMMNET=10, // (**)
+    //     END_OF_BIG_COMMENT=11, // (**)
+    //     COLON=12, // :
+    //     COLON_EQUALITY=13, // := 
+    //     LESS_THEN=14, // <
+    //     LESS_THEN_OR_EQUAL=15, // <=
+    //     LESS_THEN_AND_BIGGER_THEN=16, // <>
+    //     BIGGER_THEN=17, // >
+    //     BIGGER_THEN_OR_EQUAL=18, // >=
+    //     ERROR=19, // err
+    //     CORRECTING=20,
+    //     END_OF_PROGRAM=21 // $
+    // };
 
     std::vector<char> stack;
     char curr_char;
-    States curr_state;
+    // States curr_state;
     std::ifstream &source_file;
 
     const std::vector<char> num={'0','1','2','3','4','5','6','7','8','9'};

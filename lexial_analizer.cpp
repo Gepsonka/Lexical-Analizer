@@ -556,6 +556,5 @@ void Analizer::read_in_correcting(){
 
 
 void Analizer::read_in_end_of_program(){
-    std::cout<<"lexical analisis ha finished successfully"<<std::endl;
-    this->~Analizer();
+    std::cout<<"lexical analysis ha finished successfully"<<std::endl;
 }
